@@ -1,0 +1,23 @@
+{
+  "name": "Picture Drop",
+  "short_name": "PicDrop",
+  "theme_color": "#130166",
+  "background_color": "#130166",
+  "display": "standalone",
+  "scope": "./",
+  "start_url": "./",
+  "icons": [
+    {
+      "src": "logosmall128.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "logosmall512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable any"
+    }
+  ]
+}
