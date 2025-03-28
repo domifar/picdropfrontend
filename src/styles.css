@@ -1,1 +1,5 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+  margin: 0;
+  background: linear-gradient(to right, #0a0a54, #009fe3);
+  font-family: ui-sans-serif, -apple-system, system-ui, Segoe UI, Helvetica, Apple Color Emoji, Arial, sans-serif, Segoe UI Emoji, Segoe UI Symbol;
+}

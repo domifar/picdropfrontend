@@ -1,29 +1,26 @@
-/* Hintergrund */
 .login-container {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: linear-gradient(to right, #0a0a54, #009fe3);
 }
 
-/* Login-Box */
 .login-box {
+  text-align: center;
+  justify-content: center;
   background: white;
   padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-  text-align: center;
-  width: 350px;
+  border-radius: 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  height: 65vh;
+  width: 40vw;
 }
 
-/* Logo */
 .logo {
-  width: 120px;
+  width: 400px;
   margin-bottom: 10px;
 }
 
-/* Untertitel */
 .subtitle {
   font-size: 16px;
   color: #666;
@@ -31,23 +28,31 @@
   margin-bottom: 20px;
 }
 
-/* Eingabefelder */
-input {
-  width: 100%;
-  padding: 10px;
-  margin: 10px 0;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+form {
+  padding: 0 230px 0 230px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
 }
 
-/* Button */
+input {
+  padding: 10px;
+  border: 1px solid #009fe3;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
 button {
-  width: 100%;
+  display: block;
+  margin: 20px auto 0;
+  width: 75%;
+  height: 65px;
   padding: 10px;
   background: #002b7f;
   color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 15px;
   cursor: pointer;
   font-size: 16px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
