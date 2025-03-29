@@ -1,25 +1,29 @@
 <div class="layoutContainer">
-  <img src="logomid.png" alt="Beefeidrop Logo">
+  <div class="links">
+    <img (click)="selectButton(3, '/workspaces')" src="logomid.png" alt="Beefeidrop Logo">
 
-  <a routerLink="vouchers" class="menuSection">
-    <i class="uil uil-bill layoutIcon"></i>
-    <h2>Gutscheinsystem</h2>
-  </a>
+    <a (click)="selectButton(1, '/vouchers')" class="menuSection">
+      <i class="uil uil-bill layoutIcon"></i>
+      <h2>Gutscheinsystem</h2>
+    </a>
 
-  <a routerLink="time" class="menuSection">
-    <i class="uil uil-chart-line layoutIcon"></i>
-    <h2>Auswertung</h2>
-  </a>
+    <a (click)="selectButton(2, '/time')" class="menuSection">
+      <i class="uil uil-chart-line layoutIcon"></i>
+      <h2>Auswertung</h2>
+    </a>
 
-  <a routerLink="workspace" class="menuSection">
-    <i class="uil uil-copy layoutIcon"></i>
-    <h2>Arbeitsbereiche</h2>
-  </a>
+    <a (click)="selectButton(3, '/workspaces')" class="menuSection">
+      <i class="uil uil-copy layoutIcon"></i>
+      <h2>Arbeitsbereiche</h2>
+    </a>
 
-  <div class="menuSection">
-    <a href="/"><i class="uil uil-signout layoutIcon"></i></a>
+    <div class="menuSection">
+      <a href="/"><i class="uil uil-signout layoutIcon"></i></a>
+    </div>
   </div>
-</div>
-<div class="contentContainer">
-  <router-outlet></router-outlet>
+  <div class="lines">
+    <div [class.selected]="state.selectedTab === 1" class="line"></div>
+    <div [class.selected]="state.selectedTab === 2" class="line"></div>
+    <div [class.selected]="state.selectedTab === 3" class="line"></div>
+  </div>
 </div>

@@ -1,15 +1,20 @@
 import { Component } from '@angular/core';
-import {RouterLink, RouterOutlet} from '@angular/router';
+import { Router } from '@angular/router';
+import {SelectedTabStateService} from '../selected-tab-state.service';
 
 @Component({
   selector: 'app-layout',
-  imports: [
-    RouterOutlet,
-    RouterLink
-  ],
   templateUrl: './layout.component.html',
-  styleUrl: './layout.component.css'
+  styleUrls: ['./layout.component.css']
 })
 export class LayoutComponent {
+  constructor(
+    private router: Router,
+    public state: SelectedTabStateService
+  ) {}
 
+  selectButton(buttonNumber: number, route: string) {
+    this.state.selectedTab = buttonNumber;
+    this.router.navigate([route]);
+  }
 }

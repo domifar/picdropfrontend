@@ -1,1 +1,12 @@
-<p>time works!</p>
+<app-layout></app-layout>
+<div class="timeContainer">
+  <div class="yearSelector">
+    <i (click)="decrement()" class="uil uil-angle-left-b"></i>
+    <div class="year">{{ year }}</div>
+    <i (click)="increment()" class="uil uil-angle-right-b"></i>
+  </div>
+  <div class="graph">
+    <img src="testgraph.png" alt="testgraph" class="testgraph">
+  </div>
+</div>
+

@@ -6,9 +6,9 @@ import {LoginComponent} from './login/login.component';
 import {LayoutComponent} from './layout/layout.component';
 
 export const routes: Routes = [
-  {path:'site/workspace', component: WorkspaceComponent},
-  {path:'site/vouchers', component: VouchersComponent},
-  {path:'site/time', component: TimeComponent},
+  {path:'workspaces', component: WorkspaceComponent},
+  {path:'vouchers', component: VouchersComponent},
+  {path:'time', component: TimeComponent},
   {path:'site', component: LayoutComponent},
   {path:'', component: LoginComponent},
 ];

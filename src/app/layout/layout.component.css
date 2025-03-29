@@ -1,7 +1,10 @@
 .layoutContainer {
+  background-color: #D9D9D9;
+}
+
+.links {
   display: flex;
   justify-content: space-around;
-  background-color: #D9D9D9;
   height: 110px;
   padding: 10px;
 }
@@ -20,4 +23,22 @@
 .layoutIcon {
   color: black;
   font-size: 50px;
+}
+
+.line {
+  visibility: hidden;
+  width: 250px;
+  height: 8px;
+  border-radius: 50px;
+  background-color: black;
+  margin-right: 90px;
+}
+
+.lines {
+  display: flex;
+  padding: 0 0 0 550px;
+}
+
+.line.selected {
+  visibility: visible;
 }
