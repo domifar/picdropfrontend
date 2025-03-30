@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import {SelectedTabStateService} from '../selected-tab-state.service';
+import {SelectedTab} from '../selectedTab';
 
 @Component({
   selector: 'app-layout',
@@ -10,7 +10,7 @@ import {SelectedTabStateService} from '../selected-tab-state.service';
 export class LayoutComponent {
   constructor(
     private router: Router,
-    public state: SelectedTabStateService
+    public state: SelectedTab
   ) {}
 
   selectButton(buttonNumber: number, route: string) {

@@ -1,2 +1,38 @@
 <app-layout></app-layout>
-<div class="workspaceContainer"></div>
+<div class="workspaceContainer">
+  <div class="headlines">
+    <div>Aktivität</div>
+    <div>Name</div>
+    <div>Uploads</div>
+  </div>
+  <div class="tableContainer">
+    <div class="descriptionDots">
+      <div class="greenDot"></div>
+      Aktiv
+      <div class="redDot"></div>
+      Inaktiv
+    </div>
+    <table>
+      <tbody>
+      <tr *ngFor="let item of pulledData">
+        <td class="dot"><div [ngClass]="item.SubscriptionStatus ? 'greenDot' : 'redDot'"></div></td>
+        <td class="name">{{item.Name}}</td>
+        <td class="uploads">14</td>
+      </tr>
+      <tr *ngIf="isLoading">
+        <td colspan="3">Daten werden geladen...</td>
+      </tr>
+      <tr *ngIf="error">
+        <td colspan="3">{{error}}</td>
+      </tr>
+      <tr *ngIf="!isLoading && pulledData.length === 0 && !error">
+        <td colspan="3">Keine Daten vorhanden</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="sums">
+    <div>aktive Arbeitsbereiche: {{activeCount}}</div>
+    <div>inaktive Arbeitsbereiche: {{inactiveCount}}</div>
+  </div>
+</div>

@@ -1,1 +1,32 @@
 <app-layout></app-layout>
+<div class="vouchersContainer">
+  <div class="headlines">
+    <div>Name</div>
+    <div>Gutscheine</div>
+    <div>Eingelöst</div>
+  </div>
+  <div class="tableContainer">
+    <table>
+      <tbody>
+      <tr *ngFor="let item of pulledData">
+        <td class="name"><div>{{item.workspaceName}}</div></td>
+        <td class="vouchers">{{item.totalVouchers}}</td>
+        <td class="validatedVouchers">{{item.validatedVouchers}}</td>
+      </tr>
+      <tr *ngIf="isLoading">
+        <td colspan="3">Daten werden geladen...</td>
+      </tr>
+      <tr *ngIf="error">
+        <td colspan="3">{{error}}</td>
+      </tr>
+      <tr *ngIf="!isLoading && pulledData.length === 0 && !error">
+        <td colspan="3">Keine Daten vorhanden</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="sums">
+    <div>vergebene Gutscheine: {{voucherCount}}</div>
+    <div>eingelöste Gutscheine: {{validatedCount}}</div>
+  </div>
+</div>
