@@ -2,11 +2,24 @@
 <div class="timeContainer">
   <div class="yearSelector">
     <i (click)="decrement()" class="uil uil-angle-left-b"></i>
-    <div class="year">{{ year }}</div>
+    <div class="year">{{year}}</div>
     <i (click)="increment()" class="uil uil-angle-right-b"></i>
   </div>
   <div class="graph">
-    <img src="testgraph.png" alt="testgraph" class="testgraph">
+    <div class="chart-container">
+      <ngx-charts-bar-vertical
+        [view]="view"
+        [results]="chartData"
+        [scheme]="colorScheme"
+        [legend]="showLegend"
+        [xAxis]="true"
+        [yAxis]="true"
+        [showXAxisLabel]="true"
+        [showYAxisLabel]="true"
+        [xAxisLabel]="xAxisLabel"
+        [yAxisLabel]="yAxisLabel"
+        [gradient]="gradient">
+      </ngx-charts-bar-vertical>
+    </div>
   </div>
 </div>
-

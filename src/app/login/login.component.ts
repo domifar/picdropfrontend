@@ -11,6 +11,6 @@ export class LoginComponent {
   constructor(private router: Router) { }
 
   signIn() {
-    this.router.navigate(['/site']);
+    this.router.navigate(['/workspaces']);
   }
 }

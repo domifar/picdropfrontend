@@ -9,6 +9,5 @@ export const routes: Routes = [
   {path:'workspaces', component: WorkspaceComponent},
   {path:'vouchers', component: VouchersComponent},
   {path:'time', component: TimeComponent},
-  {path:'site', component: LayoutComponent},
   {path:'', component: LoginComponent},
 ];

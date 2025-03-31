@@ -19,6 +19,8 @@
   align-items: center;
 }
 
-.testgraph {
-  width: 90%;
+.chart-container {
+  background-color: #D9D9D9;
+  padding: 60px 30px 60px 30px;
+  border-radius: 30px;
 }
