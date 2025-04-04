@@ -4,6 +4,7 @@
 
 .links {
   display: flex;
+  align-items: center;
   justify-content: space-around;
   height: 110px;
   padding: 10px;
@@ -34,11 +35,56 @@
   margin-right: 90px;
 }
 
-.lines {
+.linesHorizontal, .linesVertical {
   display: flex;
   padding: 0 0 0 550px;
 }
 
 .line.selected {
   visibility: visible;
+}
+
+@media (orientation: portrait) {
+  h2 {
+    display: none;
+  }
+
+  .imgHorizontal {
+    display: none;
+  }
+
+  .imgVertical {
+    display: block;
+    width: 60px;
+    height: 60px;
+  }
+
+  .linesVertical {
+    display: flex;
+    padding-left: 45px;
+  }
+
+  .linesHorizontal {
+    display: none;
+  }
+
+  .line{
+    width: 50px;
+    margin: 0 0 0 30px;
+  }
+}
+
+@media (orientation: landscape) {
+  .imgHorizontal {
+    display: block;
+    width: 360px;
+  }
+
+  .imgVertical {
+    display: none;
+  }
+
+  .linesVertical {
+    display: none;
+  }
 }

@@ -6,18 +6,14 @@ import {CommonModule} from '@angular/common';
 
 @Component({
   selector: 'app-time',
+  standalone: true,
   imports: [CommonModule, LayoutComponent, NgxChartsModule],
   templateUrl: './time.component.html',
   styleUrl: './time.component.css'
 })
 export class TimeComponent {
   year: number = 2025;
-  view: [number, number] = [1700, 550];
-  colorScheme = 'night';
-  xAxisLabel = 'Monat';
-  yAxisLabel = 'Uploads';
-  showLegend = true;
-  gradient = false;
+  isLoading = true;
   yearsData: any = {};
 
   chartData: any = [];
@@ -25,13 +21,15 @@ export class TimeComponent {
   constructor(private apiRequestService: ApiRequest) {}
 
   ngOnInit(): void {
-    this.apiRequestService.getWorkspaces().subscribe({
+    this.apiRequestService.getTime().subscribe({
       next: (data) => {
         this.yearsData = this.groupByYearAndMonth(data);
         this.setChartData()
+        this.isLoading = false;
       },
       error: (err) => {
         console.error('Fehler:', err);
+        this.isLoading = false;
       }
     });
   }

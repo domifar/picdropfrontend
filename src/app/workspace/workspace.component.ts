@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { LayoutComponent } from '../layout/layout.component';
 import { CommonModule } from '@angular/common';
-import {ApiRequest} from '../apiRequest';
+import { ApiRequest } from '../apiRequest';
 
 @Component({
   selector: 'app-workspace',

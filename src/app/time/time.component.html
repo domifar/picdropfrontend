@@ -8,17 +8,18 @@
   <div class="graph">
     <div class="chart-container">
       <ngx-charts-bar-vertical
-        [view]="view"
+        *ngIf="!isLoading && chartData?.length > 0"
+        [view]="[1700, 500]"
         [results]="chartData"
-        [scheme]="colorScheme"
-        [legend]="showLegend"
+        [scheme]="'night'"
+        [legend]="true"
         [xAxis]="true"
         [yAxis]="true"
         [showXAxisLabel]="true"
         [showYAxisLabel]="true"
-        [xAxisLabel]="xAxisLabel"
-        [yAxisLabel]="yAxisLabel"
-        [gradient]="gradient">
+        [xAxisLabel]="'Monat'"
+        [yAxisLabel]="'Upload'"
+        [gradient]="false">
       </ngx-charts-bar-vertical>
     </div>
   </div>

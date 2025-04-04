@@ -1,6 +1,12 @@
 <div class="layoutContainer">
+  <div class="linesVertical">
+    <div [class.selected]="state.selectedTab === 1" class="line"></div>
+    <div [class.selected]="state.selectedTab === 2" class="line"></div>
+    <div [class.selected]="state.selectedTab === 3" class="line"></div>
+  </div>
   <div class="links">
-    <img (click)="selectButton(3, '/workspaces')" src="logomid.png" alt="Beefeidrop Logo">
+    <img (click)="selectButton(3, '/workspaces')" class="imgHorizontal" src="logomid.png" alt="Beefeidrop Logo">
+    <img (click)="selectButton(3, '/workspaces')" class="imgVertical" src="logosmall.png" alt="Beefeidrop Logo">
 
     <a (click)="selectButton(1, '/vouchers')" class="menuSection">
       <i class="uil uil-bill layoutIcon"></i>
@@ -21,7 +27,7 @@
       <a href="/"><i class="uil uil-signout layoutIcon"></i></a>
     </div>
   </div>
-  <div class="lines">
+  <div class="linesHorizontal">
     <div [class.selected]="state.selectedTab === 1" class="line"></div>
     <div [class.selected]="state.selectedTab === 2" class="line"></div>
     <div [class.selected]="state.selectedTab === 3" class="line"></div>
