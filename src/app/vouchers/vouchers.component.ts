@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, HostListener, OnInit} from '@angular/core';
 import {LayoutComponent} from '../layout/layout.component';
 import {ApiRequest} from '../apiRequest';
 import { CommonModule } from '@angular/common';

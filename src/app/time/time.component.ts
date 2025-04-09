@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, HostListener} from '@angular/core';
 import {LayoutComponent} from '../layout/layout.component';
 import {NgxChartsModule} from '@swimlane/ngx-charts';
 import {ApiRequest} from '../apiRequest';
@@ -17,10 +17,12 @@ export class TimeComponent {
   yearsData: any = {};
 
   chartData: any = [];
+  chartSize: [number, number] = [1700, 500];
 
   constructor(private apiRequestService: ApiRequest) {}
 
   ngOnInit(): void {
+    this.onResize();
     this.apiRequestService.getTime().subscribe({
       next: (data) => {
         this.yearsData = this.groupByYearAndMonth(data);
@@ -78,5 +80,16 @@ export class TimeComponent {
     }));
 
     console.log(this.chartData)
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize() {
+    const isPortrait = window.matchMedia('(orientation: portrait)').matches;
+
+    if (isPortrait) {
+      this.chartSize = [332, 430];
+    } else {
+      this.chartSize = [1700, 500];
+    }
   }
 }

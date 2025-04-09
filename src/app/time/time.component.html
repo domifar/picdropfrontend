@@ -1,4 +1,4 @@
-<app-layout></app-layout>
+<app-layout class="horizontalLayout"></app-layout>
 <div class="timeContainer">
   <div class="yearSelector">
     <i (click)="decrement()" class="uil uil-angle-left-b"></i>
@@ -9,7 +9,7 @@
     <div class="chart-container">
       <ngx-charts-bar-vertical
         *ngIf="!isLoading && chartData?.length > 0"
-        [view]="[1700, 500]"
+        [view]="chartSize"
         [results]="chartData"
         [scheme]="'night'"
         [legend]="true"
@@ -24,3 +24,4 @@
     </div>
   </div>
 </div>
+<app-layout class="verticalLayout"></app-layout>

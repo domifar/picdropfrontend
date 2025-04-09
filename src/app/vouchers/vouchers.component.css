@@ -96,14 +96,15 @@ td {
   .name {
     display: block;
     padding-left: 10px;
+    width: 155px;
   }
 
   .vouchers {
-    padding-left: 200px;
+    padding-left: 10px;
   }
 
   .validatedVouchers {
-    padding-left: 55px;
+    padding-left: 145px;
   }
 
   .headlines {

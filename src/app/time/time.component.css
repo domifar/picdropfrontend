@@ -24,3 +24,32 @@
   padding: 60px 30px 60px 30px;
   border-radius: 30px;
 }
+
+@media (orientation: portrait) {
+  .horizontalLayout {
+    display: none;
+  }
+
+  .verticalLayout {
+    display: block;
+  }
+
+  .timeContainer {
+    height: 83vh;
+    margin: 0;
+  }
+
+  .graph {
+    margin-top: 0px;
+  }
+}
+
+@media (orientation: landscape) {
+  .horizontalLayout {
+    display: block;
+  }
+
+  .verticalLayout {
+    display: none;
+  }
+}
