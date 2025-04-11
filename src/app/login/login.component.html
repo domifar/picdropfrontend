@@ -1,8 +1,10 @@
 <div class="login-container">
   <div class="login-box">
-    <img src="logobig.png" alt="Beefeidrop Logo" class="logo" />
+    <div [ngClass]="orientation ? 'VerticalImg' : 'HorizontalImg'">
+      <img src="logobig.png" alt="Beefeidrop Logo" class="logo" />
+    </div>
 
-    <form>
+    <form [ngClass]="orientation ? 'VerticalForm' : 'HorizontalForm'">
       <label for="username">Benutzername</label>
       <input type="text" id="username" placeholder="Benutzername" />
 

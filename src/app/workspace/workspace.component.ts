@@ -34,4 +34,8 @@ export class WorkspaceComponent implements OnInit {
       }
     });
   }
+
+  getRandom(): number {
+    return Math.floor(Math.random() * 50) + 1;
+  }
 }

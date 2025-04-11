@@ -15,9 +15,9 @@
     <table>
       <tbody>
       <tr *ngFor="let item of pulledData">
-        <td class="dot"><div [ngClass]="item.SubscriptionStatus ? 'greenDot' : 'redDot'"></div></td>
+        <td class="dot"><div [ngClass]="item.SubscriptionStatus == 'Active' ? 'greenDot' : 'redDot'"></div></td>
         <td class="name">{{item.Name}}</td>
-        <td class="uploads">14</td>
+        <td class="uploads">{{getRandom()}}</td>
       </tr>
       <tr *ngIf="isLoading">
         <td colspan="3">Daten werden geladen...</td>
